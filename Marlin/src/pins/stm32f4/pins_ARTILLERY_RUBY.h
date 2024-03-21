@@ -86,6 +86,24 @@
 #define E1_ENABLE_PIN                       PA5
 
 //
+// Trinamic UART stepper drivers
+//
+#if HAS_TMC_UART
+  #define X_SERIAL_PIN                E1_DIR_PIN
+  #define Y_SERIAL_PIN               E1_STEP_PIN
+  #define Z_SERIAL_PIN             E1_ENABLE_PIN
+
+  #define X_SERIAL_TX_PIN           X_SERIAL_PIN
+  #define X_SERIAL_RX_PIN           X_SERIAL_PIN
+
+  #define Y_SERIAL_TX_PIN           Y_SERIAL_PIN
+  #define Y_SERIAL_RX_PIN           Y_SERIAL_PIN
+
+  #define Z_SERIAL_TX_PIN           Z_SERIAL_PIN
+  #define Z_SERIAL_RX_PIN           Z_SERIAL_PIN
+#endif
+
+//
 // Temperature Sensors
 //
 #define TEMP_0_PIN                          PC0
